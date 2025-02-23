@@ -1,0 +1,14 @@
+[Unit]
+Description=Barcoder
+After=multi-user.target
+
+[Service]
+User=bas
+Group=bas
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/bas/barcodesonos/barcoder.py
+WorkingDirectory=/home/bas/barcodesonos
+
+[Install]
+WantedBy=multi-user.target
